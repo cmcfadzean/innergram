@@ -2,10 +2,20 @@ class PostsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
+  def upvote
+    @post = Post.find(params[:id])
+    @post.liked_by current_user
+    redirect_to posts_url
+  end
+
   # GET /posts
   # GET /posts.json
   def index
     @posts = Post.all
+  end
+
+  def library
+    @posts = current_user.posts
   end
 
   # GET /posts/1

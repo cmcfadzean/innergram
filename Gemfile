@@ -38,6 +38,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'devise'
 gem "paperclip", "~> 6.0.0"
+gem 'acts_as_votable'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
