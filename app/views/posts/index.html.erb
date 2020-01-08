@@ -10,6 +10,9 @@
         <%= link_to like_post_path(post), method: :put do %>
           <i class="far fa-heart"></i> <%= post.get_upvotes.size %>
         <% end %>
+        <%= link_to post do %>
+          <i class="far fa-comment"></i> <%= post.comments.size %>
+        <% end %>
       </div>
       <div class="post__body">
         <%= post.body %>
