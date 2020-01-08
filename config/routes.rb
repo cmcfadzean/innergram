@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
   get 'posts/library'
   resources :posts do 
+    resources :comments
     member do
       put "like", to: "posts#upvote"
     end
