@@ -13,6 +13,7 @@ class CommentsController < ApplicationController
 
   # GET posts/1/comments/new
   def new
+    @comments = @post.comments
     @comment = @post.comments.build
   end
 

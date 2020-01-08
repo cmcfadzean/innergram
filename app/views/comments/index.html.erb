@@ -1,25 +1,31 @@
-<h1>Listing comments</h1>
+<%= link_to 'Back', posts_path %>
 
-<table>
-  <tr>
-    <th></th>
-    <th>Body</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<div class="post">
+  <div class="post__user"><%= @post.user.email %></div>
+  <%= link_to 'Edit', edit_post_path(@post) %>
+  <%= link_to 'Destroy', @post, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <%= link_to @post do %><%= image_tag(@post.photo.url(:lg), class: "post__img", unless: @post.photo.nil?) %><% end %>
+  <div class="post__actions">
+    <%= link_to like_post_path(@post), method: :put do %>
+      <i class="far fa-heart"></i> <%= @post.get_likes.size %>
+    <% end %>
+  </div>
+  <div class="post__body">
+    <%= @post.body %>
+  </div>
+</div>
 
 <% @comments.each do |comment| %>
-  <tr>
-    <td><%= comment.user.email %></td>
-    <td><%= comment.body %></td>
-    <td><%= link_to 'Show', [comment.post, comment] %></td>
-    <td><%= link_to 'Edit', edit_post_comment_path(comment.post, comment) %></td>
-    <td><%= link_to 'Destroy', [comment.post, comment], method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+  <div class="comment">
+    <div class="comment__user">
+      <%= comment.user.email %>
+    </div>
+    <%= link_to 'Edit', edit_post_comment_path(comment.post, comment) %>
+    <%= link_to 'Destroy', [comment.post, comment], method: :delete, data: { confirm: 'Are you sure?' } %>
+    <div class="comment__body">
+      <%= comment.body %>
+    </div>
+  </div>
 <% end %>
-</table>
-
-<br />
 
 <%= link_to 'New Comment', new_post_comment_path(params[:post_id]) %>
