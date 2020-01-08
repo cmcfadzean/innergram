@@ -1,0 +1,32 @@
+@keyframes showMessage {
+  0%   {transform: translateY(100px); opacity: 0;}
+  10%  {transform: translateY(0); opacity: 1;}
+  90%  {transform: translateY(0); opacity: 1;}
+  100% {transform: translateY(100px); opacity: 0;}
+}
+
+.notice, .alert {
+  @include simple-ease(all);
+  color: #fff;
+  display: inline-block;
+  margin: 0px auto;
+  position: fixed;
+  transition: all 0.5s ease-in-out 0s;
+  z-index: 1060;
+  bottom: 30px;
+  right: 30px;
+  padding: 15px 20px;
+  border-radius: brew-border(radius);
+  border: none;
+  transform: translateY(100px);
+  &-show {
+    animation-name: showMessage;
+    animation-duration: 5s;
+  }
+}
+.notice {
+  background: brew-color(primary);
+}
+.alert {
+  background: brew-color(primary);
+}

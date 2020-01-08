@@ -1,0 +1,7 @@
+.gram-post {
+  margin-bottom: gram-spacing();
+  &__img {
+    border-radius: gram-border(radius);
+    margin-bottom: gram-spacing(sm);
+  }
+}

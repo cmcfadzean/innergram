@@ -1,0 +1,13 @@
+@function gram-spacing($key: md) {
+  $value: map-get($gram-spacings, $key);
+  @return $value;
+}
+
+$gram-spacings: (
+  2xs: 4px,
+  xs: 8px,
+  sm: 16px,
+  md: 24px,
+  lg: 32px,
+  xl: 40px,
+);

@@ -1,0 +1,71 @@
+.gram-form {
+  &__field {
+    margin: gram-spacing() gram-spacing(xl);
+    label {
+      font-weight: 900;
+      font-size: gram-font-size(xs);
+    }
+    input, optgroup, select, textarea {
+      display: block;
+      width: 100%;
+      border-radius: gram-border(radius);
+      height: calc(1.5em + .75rem + 2px);
+      padding: .375rem .75rem;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5;
+      background-color: #fff;
+      background-clip: padding-box;
+      border: 1px solid #ced4da;
+      transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    }
+    &--large {
+      input, optgroup, select, textarea {
+        font-size: gram-font-size(3xl);
+        margin-bottom: gram-spacing(xl);
+        color: gram-color(gray,900);
+        width: 100%;
+        font-weight: 900;
+        background-color: transparent;
+        padding: 0;
+        height: auto;
+        border: none;
+        &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+          color: gram-color(gray,200);
+        }
+        &::-moz-placeholder { /* Firefox 19+ */
+          color: gram-color(gray,200);
+        }
+        &:-ms-input-placeholder { /* IE 10+ */
+          color: gram-color(gray,200);
+        }
+        &:-moz-placeholder { /* Firefox 18- */
+          color: gram-color(gray,200);
+        }
+        &:focus {outline:0;}
+      }
+    }
+  }
+  &__actions {
+    margin: gram-spacing(xl);
+    [type=button], [type=reset], [type=submit], button {
+      background: gram-color(primary);
+      padding: gram-spacing(xs) gram-spacing(lg);
+      border-radius: gram-border(radius);
+      font-weight: 600;
+      -webkit-appearance: button;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      border: 1px solid transparent;
+      display: inline-block;
+      text-align: center;
+      vertical-align: middle;
+      transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    }
+  }
+  &__img {
+    margin: gram-spacing(lg) 0;
+  }
+}
