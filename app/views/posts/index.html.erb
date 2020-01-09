@@ -1,7 +1,7 @@
 <h1>Innergram</h1>
 <% @posts.each do |post| %>
   <div class="gram-post">
-    <h4 class="gram-post__user"><%= post.user.email %></h4>
+    <div class="gram-post__user"><%= post.user.email %></div>
     <%= link_to post_comments_path(post) do %><%= image_tag(post.photo.url(:lg), class: "gram-post__img", unless: post.photo.nil?) %><% end %>
     <div class="gram-post__actions">
       <%= link_to like_post_path(post), method: :put do %>
