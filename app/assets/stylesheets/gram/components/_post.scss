@@ -1,7 +1,24 @@
 .gram-post {
-  margin-bottom: gram-spacing();
+  margin-bottom: gram-spacing(xl);
   &__img {
     border-radius: gram-border(radius);
     margin-bottom: gram-spacing(sm);
+  }
+  &__actions {
+    margin-bottom: gram-spacing(xs);
+    a {
+      margin-right: gram-spacing(sm);
+    }
+    i {
+      font-size: gram-font-size(lg);
+      margin-right: 2px;
+    }
+  }
+  &__body {
+    margin: gram-spacing(xs) 0;
+    font-size: gram-font-size(sm);
+  }
+  &__date {
+    opacity: .6;
   }
 }

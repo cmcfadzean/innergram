@@ -1,0 +1,17 @@
+<div class="gram-post">
+  <%= link_to post_comments_path(post) do %><%= image_tag(post.photo.url(:lg), class: "gram-post__img", unless: post.photo.nil?) %><% end %>
+  <div class="gram-post__actions">
+    <%= link_to like_post_path(post), method: :put do %>
+      <i class="far fa-heart"></i> <%= post.get_upvotes.size %>
+    <% end %>
+    <%= link_to post_comments_path(post) do %>
+      <i class="far fa-comment"></i> <%= post.comments.size %>
+    <% end %>
+  </div>
+  <div class="gram-post__body">
+    <strong><%= post.user.email %>: </strong><%= post.body %>
+  </div>
+  <div class="gram-post__date">
+    <%= time_ago_in_words(post.created_at) %> ago
+  </div>
+</div>

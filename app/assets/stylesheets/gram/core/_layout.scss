@@ -16,6 +16,10 @@ html {
     flex: 1;
     overflow: auto;
   }
+  &-heading {
+    margin-bottom: gram-spacing();
+    font-size: gram-font-size(xl);
+  }
   &-actions {
     padding: gram-spacing(sm);
     display: flex;
