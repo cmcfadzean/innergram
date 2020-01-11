@@ -1,0 +1,9 @@
+.comment {
+  margin: gram-spacing(sm) 0;
+  &__body {
+    margin-bottom: 2px;
+  }
+  a {
+    margin-right: gram-spacing(xs);
+  }
+}

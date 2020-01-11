@@ -1,3 +1,15 @@
-<%= link_to 'Back', posts_path %>
+<div class="gram-heading">
+  <div class="gram-heading__left">
+    <%= link_to posts_path do %>
+      <i class="fas fa-arrow-left"></i>
+    <% end %>
+  </div>
+  <div class="gram-heading__body">
+    <div class="gram-heading__title">New Post</div>
+  </div>
+  <div class="gram-heading__right">
+  
+  </div>
+</div>
 
 <%= render 'form', post: @post %>

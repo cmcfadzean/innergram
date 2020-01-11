@@ -16,9 +16,29 @@ html {
     flex: 1;
     overflow: auto;
   }
+  &-title {
+    margin-top: -4px;
+  }
   &-heading {
     margin-bottom: gram-spacing();
     font-size: gram-font-size(xl);
+    display: flex;
+    &__left, &__right {
+      width: 80px;
+    }
+    &__right {
+      text-align: right;
+      i {
+        margin-left: gram-spacing(sm);
+      }
+    }
+    &__body {
+      flex: 1;
+      text-align: center;
+    }
+    &__title {
+      font-weight: 700;
+    }
   }
   &-actions {
     padding: gram-spacing(sm);

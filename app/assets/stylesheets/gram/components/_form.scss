@@ -1,15 +1,15 @@
 .gram-form {
   &__field {
-    margin: gram-spacing() gram-spacing(xl);
+    margin: gram-spacing() 0;
     label {
       font-weight: 900;
       font-size: gram-font-size(xs);
     }
-    input, optgroup, select, textarea {
+    textarea {
       display: block;
       width: 100%;
       border-radius: gram-border(radius);
-      height: calc(1.5em + .75rem + 2px);
+      height: 50vh;
       padding: .375rem .75rem;
       font-size: 1rem;
       font-weight: 400;
@@ -47,12 +47,13 @@
     }
   }
   &__actions {
-    margin: gram-spacing(xl);
+    margin: gram-spacing(xl) 0;
     [type=button], [type=reset], [type=submit], button {
-      background: gram-color(primary);
-      padding: gram-spacing(xs) gram-spacing(lg);
-      border-radius: gram-border(radius);
+      background: gram-color(gray,900);
+      color: #fff;
+      padding: gram-spacing(sm) gram-spacing(lg);
       font-weight: 600;
+      width: 100%;
       -webkit-appearance: button;
       -webkit-user-select: none;
       -moz-user-select: none;

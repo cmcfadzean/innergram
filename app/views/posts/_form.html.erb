@@ -11,16 +11,13 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="gram-form__field">
     <%= form.file_field :photo %>
   </div>
-
-  <div class="field">
-    <%= form.label :body %>
+  <div class="gram-form__field">
     <%= form.text_area :body %>
   </div>
-
-  <div class="actions">
+  <div class="gram-form__actions">
     <%= form.submit %>
   </div>
 <% end %>
